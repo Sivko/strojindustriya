@@ -147,3 +147,7 @@ h1 {
 h2 {
   @apply text-subtitle font-semibold text-text
 }
+
+ul li {
+  list-style-type: disc;
+}

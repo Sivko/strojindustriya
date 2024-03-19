@@ -15,11 +15,17 @@ export default function Realization() {
 
     <h2 className="content">Реализация</h2>
 
-    {items.map((item, index) => (
-      <div key={index} className="last:border-b border-outline last:pb-12">
-        <RealizationItem key={index} />
-      </div>
-    ))}
+    <div>
+      {items.map((item, index) => (
+        <div key={index} className="last:border-b border-outline last:pb-12">
+          <RealizationItem key={index} />
+        </div>
+      ))}
+    </div>
+    <div className="md:grid grid-cols-4 gap-4 mt-12 pb-6  content">
+      <div />
+      <Button text="Все проекты" icons={false} />
+    </div>
 
   </div>)
 }

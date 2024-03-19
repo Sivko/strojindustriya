@@ -78,9 +78,6 @@ export default function OfferList() {
           <button className="p-2"><Image src={"/icons/arrowRight.svg"} width={18} height={15} alt="" /></button>
         </div>
         <div className="col-span-3">
-          {/* <Image className="w-full" src="https://placehold.co/358x240/png" height={358} width={240} alt="" />
-          <Image className="w-full" src="https://placehold.co/358x240/png" height={358} width={240} alt="" />
-          <Image className="w-full" src="https://placehold.co/358x240/png" height={358} width={240} alt="" /> */}
           <Slider slidesPerView={3}>
             {list.map((item, index) => {
               return (<SwiperSlide key={index}>

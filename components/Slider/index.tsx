@@ -13,6 +13,7 @@ export default function Slider({ slidesPerView, children }: { slidesPerView: num
     <Swiper
       slidesPerView={slidesPerView}
       className="mySwiper"
+      loop={true}
       spaceBetween={"16px"}
     >
       {children}
