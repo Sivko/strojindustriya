@@ -4,6 +4,9 @@ import OfferList from "@/components/OfferList";
 import Realization from "@/components/Realization";
 import StepWorks from "@/components/StepWorks";
 import Responseble from "@/components/Responseble";
+import About from "@/components/About";
+import Partners from "@/components/Partners";
+import Contacts from "@/components/Contacts";
 
 export default function Home() {
   return (
@@ -13,6 +16,9 @@ export default function Home() {
       <Realization />
       <StepWorks />
       <Responseble />
+      <About />
+      <Partners />
+      <Contacts />
     </main>
   );
 }

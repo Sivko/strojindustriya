@@ -50,10 +50,10 @@ export default function OfferList() {
 
   return (
     <div className="mt-extra pb-10">
-      <h2 className="content">Мы предлагаем</h2>
+      <h2 className="content md:mb-0 mb-7">Мы предлагаем</h2>
       <div className="md:grid grid-cols-4 gap-4 content">
         <div className="hidden md:block" />
-        <div className="flex items-center flex-nowrap gap-[24px] pb-[12px] col-span-3 border-b border-outline">
+        <div className="flex items-center flex-nowrap gap-[24px] pb-[12px] col-span-3 border-b border-outline overflow-x-auto">
           {items.map((item, index) => {
             return (<div key={index} onClick={() => setActive(index)} className={`cursor-pointer font-semibold text-base ${index == active ? "text-text" : "text-addButton"}`}>
               {item.title}

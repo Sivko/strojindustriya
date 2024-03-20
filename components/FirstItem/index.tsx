@@ -3,7 +3,7 @@ import Button from "@/components/Button";
 
 export default function FirstItem() {
   return (<div>
-    <h1 className=" mt-12 whitespace-nowrap overflow-hidden">Стройиндустрия-<span className="text-main">К</span></h1>
+    <h1 className="mt-12 whitespace-nowrap overflow-x-auto overflow-y-hidden content">Стройиндустрия-<span className="text-main">К</span></h1>
     <div className="md:grid grid-cols-4 gap-4 content">
       <div />
       <div className="mt-3 md:mt-6">

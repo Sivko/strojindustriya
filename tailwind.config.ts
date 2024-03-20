@@ -19,7 +19,7 @@ const config: Config = {
     },
     fontSize: {
       ...defaultTheme.fontSize,
-      title: ["clamp(56px, 9vw, 120px)","clamp(64px, 9vw, 120px)"],
+      title: ["clamp(56px, 8vw, 120px)","clamp(64px, 9vw, 120px)"],
       subtitle: ["clamp(20px, 9vw, 24px)","clamp(24px, 9vw, 40px)"],
       base: ["clamp(14px, 9vw, 15px)","20px"],
       small: ["clamp(11px, 2vw, 14px)","clamp(16px, 2vw, 24px)"]

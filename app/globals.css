@@ -140,6 +140,7 @@ body {
   @apply w-full px-[24px] md:px-[48px]
 }
 
+
 h1 {
   @apply font-semibold uppercase text-center text-title tracking-[0.5px]
 }
