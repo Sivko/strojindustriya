@@ -15,6 +15,7 @@ export default function Slider({ slidesPerView, children }: { slidesPerView: num
       className="mySwiper"
       loop={true}
       spaceBetween={"16px"}
+      autoHeight={true}
     >
       {children}
     </Swiper>
