@@ -6,7 +6,11 @@ import { SwiperSlide } from "swiper/react"
 
 export default function Responseble() {
 
-  const list = [1,23,4,42]
+  const list = [
+    { name: "Гаврилов Андрей Викторович", position: "Руководитель компании", image: "/images/user1.png" },
+    { name: "Занин Николай Сергеевич", position: "Директор компании", image: "/images/user2.png" },
+    { name: "Поддубный Роман Павлович", position: "Главный инженер", image: "/images/user3.png" },
+  ]
 
   return (<>
     <div className="mt-extra">
@@ -28,9 +32,9 @@ export default function Responseble() {
             {list.map((item, index) => {
               return (<SwiperSlide key={index}>
                 <div>
-                  <Image className="w-full" src={`https://placehold.co/358x480/png`} height={358} width={480} alt="" />
-                  <div className=" font-bold text-base text-left py-3">{`item.text`}</div>
-                  <div className="text-addText font-bold text-base text-left py-3">{`item.text`}</div>
+                  <Image className="!h-[358px] w-full object-cover object-center" src={item.image} height={358} width={480} alt="" />
+                  <div className=" font-semibold text-base text-left pt-3 mb-2">{item.name}</div>
+                  <div className="text-addText text-base text-left ">{item.position}</div>
                 </div>
               </SwiperSlide>)
             })}

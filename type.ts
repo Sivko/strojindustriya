@@ -1,11 +1,11 @@
 export interface Root {
-  object?: string
-  results?: Result[]
-  next_cursor?: any
-  has_more?: boolean
-  type?: string
-  page_or_database?: PageOrDatabase
-  request_id?: string
+  object: string
+  results: Result[]
+  next_cursor: any
+  has_more: boolean
+  type: string
+  page_or_database: PageOrDatabase
+  request_id: string
 }
 
 export interface Result {
@@ -46,6 +46,7 @@ export interface Properties {
   address: Address
   order: Order
   date: Date
+  style: Style
   map: Map
   Status: Status
   square: Square
@@ -161,6 +162,34 @@ export interface Date2 {
   time_zone: any
 }
 
+export interface Style {
+  id: string
+  type: string
+  rich_text: RichText4[]
+}
+
+export interface RichText4 {
+  type: string
+  text: Text4
+  annotations: Annotations4
+  plain_text: string
+  href: any
+}
+
+export interface Text4 {
+  content: string
+  link: any
+}
+
+export interface Annotations4 {
+  bold: boolean
+  italic: boolean
+  strikethrough: boolean
+  underline: boolean
+  code: boolean
+  color: string
+}
+
 export interface Map {
   id: string
   type: string
@@ -210,18 +239,18 @@ export interface Title {
 
 export interface Title2 {
   type: string
-  text: Text4
-  annotations: Annotations4
+  text: Text5
+  annotations: Annotations5
   plain_text: string
   href: any
 }
 
-export interface Text4 {
+export interface Text5 {
   content: string
   link: any
 }
 
-export interface Annotations4 {
+export interface Annotations5 {
   bold: boolean
   italic: boolean
   strikethrough: boolean

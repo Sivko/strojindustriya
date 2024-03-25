@@ -18,7 +18,7 @@ export default function Contacts() {
       </div>
       <div className="h-full flex items-center">
         <div>
-          <p className="text-base"><b>Адрес:</b></p>
+          <p className="text-base mb-3"><b>Адрес:</b></p>
           <p className="text-base text-addText">Ул. Бульвар Старшинова 12. 1-й этаж офис 7</p>
           <div className="w-full h-[150px] bg-addText mt-3 mb-6"></div>
           <Button text="Показать на карте" icons={false} />

@@ -15,6 +15,6 @@ export default function FirstItem() {
         </div>
       </div>
     </div>
-    <Image className=" mt-14 w-full" src="https://placehold.co/1600x852/png" height={852} width={1600} alt="" />
+    <Image className=" mt-14 w-full" src="/images/main.png" height={852} width={1600} alt="" />
   </div>)
 }

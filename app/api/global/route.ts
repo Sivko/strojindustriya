@@ -11,8 +11,6 @@ export async function GET(request: Request) {
     const data = await axios.post(`${process.env.NOTE_DB_CONTENT}`, ({}), config)
     return Response.json(data.data)
   } catch (err) {
-    console.log(err)
     return Response.json("err")
-    return Response.json({ "status": "Error" })
   }
 }

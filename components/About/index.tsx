@@ -21,7 +21,7 @@ export default function About() {
     { title: "Проектов в протфеле компании", metric: "> 15", image: "" },
     { title: "Коммерческой и жилой недвидимости", metric: "60 000 м²", image: "" },
     { title: "", metric: "", image: "" },
-    { title: "", metric: "", image: "https://placehold.co/358x358/png" },
+    { title: "", metric: "", image: "/images/building.png" },
     { title: "Государственных проектов", metric: "> 7", image: "" },
     { title: "На рынке недвижимости", metric: "10 лет", image: "" },
     { title: "Партнеров", metric: ">10", image: "" },
@@ -29,9 +29,9 @@ export default function About() {
   ]
 
   const Spacing = ({ index }: { index: number }) => <div
+    key={index}
     ref={el => {
-      //@ts-ignore
-      return itemsRef.current[index] = el
+      if (el) itemsRef.current[index] = el 
     }}
     className={`border border-outline hidden md:block even:bg-[#f3d] ${index % 2 ? " transform scale-x-[1] scale-y-[-1]" : ""}`}
   > 
@@ -41,7 +41,7 @@ export default function About() {
   </div>
 
   return (<div className="mt-extra content">
-    <h2 className="mb-12">Компонентность</h2>
+    <h2 className="mb-12">Компетентность</h2>
     <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
       {items.map((item, index) => {
         const image = item.image

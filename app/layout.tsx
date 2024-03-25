@@ -3,7 +3,6 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageProvider from "./page-provider";
-import axios from "axios";
 import { Root } from "@/type";
 
 export const metadata: Metadata = {
@@ -17,8 +16,8 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  const res = await axios.get(`${process.env.URL}/api/global`)
-  const global = res.data as Root;
+  const res = await fetch(`${process.env.URL}/api/global`)
+  const global = await res.json() as Root;
 
   return (
     <html lang="ru">

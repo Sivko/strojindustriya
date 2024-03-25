@@ -18,28 +18,23 @@ export default function OfferList() {
 
   const list = [
     {
-      image: "https://placehold.co/358x240/png",
+      image: "/images/offer1.png",
       text: "Логические комлексы",
       link: "#"
     },
     {
-      image: "https://placehold.co/358x240/png",
+      image: "/images/offer2.png",
       text: "Склады",
       link: "#"
     },
     {
-      image: "https://placehold.co/358x240/png",
+      image: "/images/offer3.png",
       text: "Коммерческая недвижимость",
       link: "#"
     },
     {
-      image: "https://placehold.co/358x240/png",
-      text: "Логические комлексы",
-      link: "#"
-    },
-    {
-      image: "https://placehold.co/358x240/png",
-      text: "Что-то еще",
+      image: "/images/offer4.png",
+      text: "Уникальные проекты",
       link: "#"
     },
 
@@ -82,7 +77,7 @@ export default function OfferList() {
             {list.map((item, index) => {
               return (<SwiperSlide key={index}>
                 <div>
-                  <Image className="w-full" src={item.image} height={358} width={240} alt="" />
+                  <Image className="w-full !h-[258px] object-cover object-center" src={item.image} height={258} width={240} alt="" />
                   <div className=" font-bold text-base text-left py-3">{item.text}</div>
                 </div>
               </SwiperSlide>)
