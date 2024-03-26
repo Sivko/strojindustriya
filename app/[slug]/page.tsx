@@ -31,6 +31,6 @@ export default async function Page(request: Params) {
   const page = global.results?.filter(item => (item.properties?.slug?.rich_text[0] ? item.properties.slug.rich_text[0].text.content : "") == `/${request.params?.slug}`)
 
   return (<div className="">
-    <ProductPage data={page[0]} />
+    {page && <ProductPage data={page[0]} />}
   </div>)
 }

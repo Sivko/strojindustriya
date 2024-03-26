@@ -1,11 +1,11 @@
 export interface Root {
-  object: string
+  object?: string
   results: Result[]
-  next_cursor: any
-  has_more: boolean
-  type: string
-  page_or_database: PageOrDatabase
-  request_id: string
+  next_cursor?: any
+  has_more?: boolean
+  type?: string
+  page_or_database?: PageOrDatabase
+  request_id?: string
 }
 
 export interface Result {

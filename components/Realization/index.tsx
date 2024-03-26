@@ -9,7 +9,7 @@ import { Context } from "@/app/page-provider";
 export default function Realization() {
 
   const { global } = useContext(Context);
-
+  
   const [isShowAll, setIsShowAll] = useState(false)
   const [data, setData] = useState(global.results.slice(0, 3))
 

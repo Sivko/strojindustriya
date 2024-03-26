@@ -29,7 +29,7 @@ export const Context = createContext<Theme>({
   global: {} as Root
 })
 
-function PageProvider({ children, global={} }: Readonly<{ children: React.ReactNode; global?: Root }>) {
+function PageProvider({ children, global={results: []} }: Readonly<{ children: React.ReactNode; global?: Root }>) {
 
   const [modals, setModals] = useState([]);
   const [isAdmin, setIsAdmin] = useState(false);
