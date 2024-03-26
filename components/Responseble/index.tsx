@@ -16,7 +16,7 @@ export default function Responseble() {
   ]
 
   return (<>
-    <div className="mt-extra">
+    <div className="mt-extra" id="o_nas">
       <h2 className="content">Ответственность</h2>
       <div className="md:grid grid-cols-4 gap-4 mt-12 pb-6  content">
         <div />

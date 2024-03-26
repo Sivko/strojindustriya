@@ -19,7 +19,7 @@ export default function Contacts() {
   }
 
   return (<div className="mt-extra content">
-    <div className="md:grid grid-cols-4 gap-4 mt-12 pb-6">
+    <div className="md:grid grid-cols-4 gap-4 mt-12 pb-6" id="contacts">
       <h2>Оставить заявку</h2>
       <div className="col-span-2">
         <div className="text-[clamp(44px,5vw,76px)] leading-[clamp(56px,8vw,80px)] font-light">Обсудим проект?</div>

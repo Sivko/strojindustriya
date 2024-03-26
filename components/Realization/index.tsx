@@ -17,12 +17,12 @@ export default function Realization() {
   useEffect(() => {
     if (isShowAll) setData(global.results)
     else setData(global.results.slice(0, 3))
-  
+
   }, [isShowAll])
 
   return (<div className="mt-extra pb-10">
 
-    <h2 className="content">Реализация</h2>
+    <h2 className="content" id="projects">Реализация</h2>
 
     <div>
       {data && data.map((item, index) => (

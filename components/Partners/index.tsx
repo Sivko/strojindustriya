@@ -18,7 +18,7 @@ export default function Partners() {
 
 
   return (<div className="mt-extra content">
-    <h2>Партнеры</h2>
+    <h2 id="partners">Партнеры</h2>
     <div className="md:grid grid-cols-4 gap-4 mt-12 pb-6 border-b border-outline">
       <div />
       <p className="text-base text-addText">
