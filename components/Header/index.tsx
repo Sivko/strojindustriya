@@ -22,7 +22,7 @@ export default function Header() {
         </div>
         <div className="hidden md:flex justify-end gap-[20px] ">
           <Link className="flex items-center gap-[16px]" href={`tel:+79787969632`}><Image className=" object-fill" src={`/icons/phone.svg`} alt="" width={24} height={24} />+7 (978) 796 - 96 -32</Link>
-          <Link className="flex items-center gap-[16px]" href={`mailto:stroiindustria_K@mail.ru`}><Image className=" object-fill" src={`/icons/mail.svg`} alt="" width={20} height={16} />stroiindustria_K@mail.ru</Link>
+          <Link className="flex items-center gap-[16px]" href={`mailto:strojindustriya-k@yandex.ru`}><Image className=" object-fill" src={`/icons/mail.svg`} alt="" width={20} height={16} />strojindustriya-k@yandex.ru</Link>
         </div>
         {/* <div className="md:hidden col-span-2 flex items-end justify-end" onClick={()=>setIsOpenMobileMenu(e=>!e)}> */}
           {/* <Gamburger status={isOpenMobileMenu}  /> */}

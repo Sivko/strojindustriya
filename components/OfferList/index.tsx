@@ -1,10 +1,10 @@
 "use client"
 
-import { useState } from "react"
+import { useRef, useState } from "react"
 import Button from "../Button";
 import Image from "next/image";
 import Slider from "../Slider";
-import { SwiperSlide } from "swiper/react";
+import { SwiperRef, SwiperSlide } from "swiper/react";
 
 export default function OfferList() {
 
@@ -40,7 +40,7 @@ export default function OfferList() {
 
   ]
 
-
+  const swiperRef = useRef<SwiperRef>(null)
   const [active, setActive] = useState(0);
 
   return (
@@ -69,11 +69,11 @@ export default function OfferList() {
 
       <div className="md:grid grid-cols-4 gap-4 content mt-12">
         <div className="">
-          <button className="p-2"><Image src={"/icons/arrowLeft.svg"} width={18} height={15} alt="" /></button>
-          <button className="p-2"><Image src={"/icons/arrowRight.svg"} width={18} height={15} alt="" /></button>
+          <button className="p-2" onClick={() => swiperRef.current && swiperRef.current.swiper.slidePrev()}><Image src={"/icons/arrowLeft.svg"} width={18} height={15} alt="" /></button>
+          <button className="p-2" onClick={() => swiperRef.current && swiperRef.current.swiper.slideNext()}><Image src={"/icons/arrowRight.svg"} width={18} height={15} alt="" /></button>
         </div>
         <div className="col-span-3">
-          <Slider slidesPerView={3}>
+          <Slider slidesPerView={3} swiperRef={swiperRef}>
             {list.map((item, index) => {
               return (<SwiperSlide key={index}>
                 <div>

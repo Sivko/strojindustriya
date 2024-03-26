@@ -1,8 +1,9 @@
 import Image from "next/image"
 import Button from "../Button"
 import Slider from "../Slider"
-import { SwiperSlide } from "swiper/react"
+import { SwiperRef, SwiperSlide } from "swiper/react"
 import { Result } from "@/type"
+import { useRef } from "react"
 
 export default function RealizationItem({ item }: { item: Result }) {
   const { properties } = item
@@ -10,6 +11,7 @@ export default function RealizationItem({ item }: { item: Result }) {
   const images = properties.media.files.map((item) => item.file.url);
 
   const rangeYear = properties.date.date.end ? `${new Date(properties.date.date.start).getFullYear()}-${new Date(properties.date.date.end).getFullYear()}` : new Date(properties.date.date.start).getFullYear();
+  const swiperRef = useRef<SwiperRef>(null)
 
   return (<>
     <div className="content ">
@@ -20,8 +22,8 @@ export default function RealizationItem({ item }: { item: Result }) {
     </div>
     <div className="md:grid grid-cols-4 gap-4 content mt-2 md:mt-12">
       <div className="hidden md:block">
-        <button className="p-2"><Image src={"/icons/arrowLeft.svg"} width={18} height={15} alt="" /></button>
-        <button className="p-2"><Image src={"/icons/arrowRight.svg"} width={18} height={15} alt="" /></button>
+        <button className="p-2" onClick={() => swiperRef.current && swiperRef.current.swiper.slidePrev()}><Image src={"/icons/arrowLeft.svg"} width={18} height={15} alt="" /></button>
+        <button className="p-2" onClick={() => swiperRef.current && swiperRef.current.swiper.slideNext()}><Image src={"/icons/arrowRight.svg"} width={18} height={15} alt="" /></button>
       </div>
       <div>
         <p className="text-addText text-base">{properties.description.rich_text[0].text.content}</p>
@@ -30,7 +32,7 @@ export default function RealizationItem({ item }: { item: Result }) {
         </div>}
       </div>
       <div className="col-span-2">
-        <Slider slidesPerView={2}>
+        <Slider slidesPerView={2} swiperRef={swiperRef}>
           {images.map((image, index) => {
             return (<SwiperSlide key={index}>
               <div>

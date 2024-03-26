@@ -2,9 +2,12 @@
 
 import Image from "next/image"
 import Slider from "@/components/Slider"
-import { SwiperSlide } from "swiper/react"
+import { SwiperRef, SwiperSlide } from "swiper/react"
+import { useRef } from "react";
 
 export default function Responseble() {
+
+  const swiperRef = useRef<SwiperRef>(null)
 
   const list = [
     { name: "Гаврилов Андрей Викторович", position: "Руководитель компании", image: "/images/user1.png" },
@@ -24,11 +27,11 @@ export default function Responseble() {
 
       <div className="md:grid grid-cols-4 gap-4 content mt-12">
         <div className="">
-          <button className="p-2"><Image src={"/icons/arrowLeft.svg"} width={18} height={15} alt="" /></button>
-          <button className="p-2"><Image src={"/icons/arrowRight.svg"} width={18} height={15} alt="" /></button>
+          <button className="p-2" onClick={() => swiperRef.current && swiperRef.current.swiper.slidePrev()}><Image src={"/icons/arrowLeft.svg"} width={18} height={15} alt="" /></button>
+          <button className="p-2" onClick={() => swiperRef.current && swiperRef.current.swiper.slideNext()}><Image src={"/icons/arrowRight.svg"} width={18} height={15} alt="" /></button>
         </div>
         <div className="col-span-3">
-          <Slider slidesPerView={3}>
+          <Slider slidesPerView={3} swiperRef={swiperRef}>
             {list.map((item, index) => {
               return (<SwiperSlide key={index}>
                 <div>

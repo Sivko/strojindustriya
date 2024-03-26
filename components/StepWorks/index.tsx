@@ -18,9 +18,8 @@ export default function StepWorks() {
             <div className="text-[clamp(44px,8vw,96px)] col-span-2 font-light">Брифинг</div>
             <div className="text-addText text-base">
               <ul>
-                <li>Тема проекта</li>
-                <li>Потребности, предпочтения, ожидания клиента</li>
-                <li>Консультация</li>
+                <li>Определение ключевых задач</li>
+                <li>Разработка стратегии и плана действий</li>
               </ul>
             </div>
           </div>
@@ -32,9 +31,8 @@ export default function StepWorks() {
             <div className="text-[clamp(44px,8vw,96px)] col-span-2 font-light">Договор</div>
             <div className="text-addText text-base">
               <ul>
-                <li>Тема проекта</li>
-                <li>Потребности, предпочтения, ожидания клиента</li>
-                <li>Консультация</li>
+                <li>Описание предмета сделки</li>
+                <li>Включение различных дополнительных условий</li>
               </ul>
             </div>
           </div>
@@ -46,9 +44,8 @@ export default function StepWorks() {
             <div className="text-[clamp(44px,8vw,96px)] col-span-2 font-light">Реализация</div>
             <div className="text-addText text-base">
               <ul>
-                <li>Тема проекта</li>
-                <li>Потребности, предпочтения, ожидания клиента</li>
-                <li>Консультация</li>
+                <li>Получение необходимых разрешений и согласований от соответствующих органов</li>
+                <li>Выполнение строительно-монтажных работ</li>
               </ul>
             </div>
           </div>
@@ -60,9 +57,7 @@ export default function StepWorks() {
             <div className="text-[clamp(44px,8vw,96px)] col-span-2 font-light">Сдача работ</div>
             <div className="text-addText text-base">
               <ul>
-                <li>Тема проекта</li>
-                <li>Потребности, предпочтения, ожидания клиента</li>
-                <li>Консультация</li>
+                <li>Окончательная сдача объекта, заключение договора на техническое обслуживание и гарантийное обслуживание</li>
               </ul>
             </div>
           </div>

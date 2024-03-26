@@ -1,13 +1,20 @@
 "use client";
 
-import { SwiperSlide } from "swiper/react"
+import { SwiperRef, SwiperSlide } from "swiper/react"
 import Slider from "../Slider"
 import Image from "next/image"
+import { useRef } from "react";
 
 export default function Partners() {
 
 
-  const list = [1, 23, 4, 42]
+  const list = [
+    {image: "/images/partners/partner1.png"},
+    {image: "/images/partners/partner2.png"},
+    {image: "/images/partners/partner3.png"},
+    {image: "/images/partners/partner4.png"},
+]
+  const swiperRef = useRef<SwiperRef>(null)
 
 
   return (<div className="mt-extra content">
@@ -22,17 +29,17 @@ export default function Partners() {
 
     <div className="md:grid grid-cols-4 gap-4 mt-12">
       <div className="">
-        <button className="p-2"><Image src={"/icons/arrowLeft.svg"} width={18} height={15} alt="" /></button>
-        <button className="p-2"><Image src={"/icons/arrowRight.svg"} width={18} height={15} alt="" /></button>
+        <button className="p-2" onClick={() => swiperRef.current && swiperRef.current.swiper.slidePrev()}><Image src={"/icons/arrowLeft.svg"} width={18} height={15} alt="" /></button>
+        <button className="p-2" onClick={() => swiperRef.current && swiperRef.current.swiper.slideNext()}><Image src={"/icons/arrowRight.svg"} width={18} height={15} alt="" /></button>
       </div>
       <div className="col-span-3">
-        <Slider slidesPerView={3}>
+        <Slider slidesPerView={3} swiperRef={swiperRef}>
           {list.map((item, index) => {
             return (
               <SwiperSlide key={index}>
-                <div className="flex items-start justify-center border border-outline min-h">
-                  <div className="w-full py-[80px] px-[10px]">
-                    <Image className="w-full" src={`https://placehold.co/167x104/png`} height={167} width={104} alt="" />
+                <div className="flex justify-center border border-outline min-h">
+                  <div className="w-full py-[80px] px-[50px] flex items-center justify-center h-[260px]">
+                    <Image className="w-full !object-contain" src={item.image} height={167} width={104} alt="" />
                   </div>
                 </div>
               </SwiperSlide>)
