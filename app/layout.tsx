@@ -16,7 +16,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  const res = await fetch(`${process.env.URL}/api/global`)
+  const res = await fetch(`${process.env.URL}/api/global`, { next: { revalidate: 3600 } })
   const global = await res.json() as Root;
 
   return (
