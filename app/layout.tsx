@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageProvider from "./page-provider";
 import { Root } from "@/type";
+import { configNotion } from "@/configNotion";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +17,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  const res = await fetch(`${process.env.URL}/api/global`, { cache: "no-cache" })
+  const res = await fetch(`${process.env.NOTE_DB_CONTENT}`, configNotion)
   const _global = await res.json() as Root;
   const global = {..._global, results: _global.results.filter(e=>e.properties.Status.status.name == "publish")}
   return (

@@ -1,4 +1,5 @@
 import ProductPage from "@/components/ProductPage";
+import { configNotion } from "@/configNotion";
 import { Root } from "@/type";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -26,7 +27,7 @@ export async function generateMetadata(request: Params): Promise<Metadata> {
 
 export default async function Page(request: Params) {
 
-  const res = await fetch(`${process.env.URL}/api/global`, {cache: "no-cache"})
+  const res = await fetch(`${process.env.NOTE_DB_CONTENT}`, configNotion)
   const global = await res.json() as Root;
   const page = global.results?.filter(item => (item.properties?.slug?.rich_text[0] ? item.properties.slug.rich_text[0].text.content : "") == `/${request.params?.slug}`)
 
