@@ -10,9 +10,12 @@ export default function Responseble() {
   const swiperRef = useRef<SwiperRef>(null)
 
   const list = [
-    { name: "Гаврилов Андрей Викторович", position: "Руководитель компании", image: "/images/user1.png" },
-    { name: "Занин Николай Сергеевич", position: "Директор компании", image: "/images/user2.png" },
-    { name: "Поддубный Роман Павлович", position: "Главный инженер", image: "/images/user3.png" },
+    { name: "Гаврилов Андрей Викторович", position: "Руководитель компании", image: "/images/users/user1.png" },
+    { name: "Занин Николай Сергеевич", position: "Директор компании", image: "/images/users/user2.png" },
+    { name: "Поддубный Роман Павлович", position: "Главный инженер", image: "/images/users/user3.png" },
+    { name: "Аджанский Максим Павлович", position: "Начальник ПТО", image: "/images/users/user4.jpg" },
+    { name: "Занина Анастасия Сергеевна", position: "Дизайнер компании", image: "/images/users/user5.jpg" },
+    { name: "Санталин Виталий Русланович", position: "Менеджер по строительству", image: "/images/users/user6.jpg" },
   ]
 
   return (<>
@@ -21,14 +24,14 @@ export default function Responseble() {
       <div className="md:grid grid-cols-4 gap-4 mt-12 pb-6  content">
         <div />
         <p className="text-base text-addText">
-          Мы с ответственностью подходим к сблюдению норм ведения проекта. За, более чем, 10-ти летний опыт работы мы выделили 4 ключевых этапа реализации ваших идей.
+          Профессионализм наших команд – предмет нашей гордости
         </p>
       </div>
 
       <div className="md:grid grid-cols-4 gap-4 content mt-12">
         <div className="">
-          {/* <button className="p-2" onClick={() => swiperRef.current && swiperRef.current.swiper.slidePrev()}><Image src={"/icons/arrowLeft.svg"} width={18} height={15} alt="" /></button>
-          <button className="p-2" onClick={() => swiperRef.current && swiperRef.current.swiper.slideNext()}><Image src={"/icons/arrowRight.svg"} width={18} height={15} alt="" /></button> */}
+          <button className="p-2" onClick={() => swiperRef.current && swiperRef.current.swiper.slidePrev()}><Image src={"/icons/arrowLeft.svg"} width={18} height={15} alt="" /></button>
+          <button className="p-2" onClick={() => swiperRef.current && swiperRef.current.swiper.slideNext()}><Image src={"/icons/arrowRight.svg"} width={18} height={15} alt="" /></button>
         </div>
         <div className="col-span-3">
           <Slider slidesPerView={3} swiperRef={swiperRef}>
@@ -44,8 +47,6 @@ export default function Responseble() {
           </Slider>
         </div>
       </div>
-
-
     </div>
   </>)
 }

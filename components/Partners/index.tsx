@@ -38,7 +38,7 @@ export default function Partners() {
             return (
               <SwiperSlide key={index}>
                 <div className="flex justify-center border border-outline min-h">
-                  <div className="w-full py-[80px] px-[50px] flex items-center justify-center h-[260px]">
+                  <div className="w-full py-[60px] px-[40px] flex items-center justify-center h-[260px]">
                     <Image className="w-full !object-contain" src={item.image} height={167} width={104} alt="" />
                   </div>
                 </div>

@@ -2,8 +2,9 @@
 import { Map, Placemark, YMaps } from '@pbe/react-yandex-maps';
 import Button from "../Button";
 import axios from 'axios';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { usePathname } from "next/navigation";
+import { Context } from '@/app/page-provider';
 
 export default function Contacts() {
 
@@ -11,11 +12,12 @@ export default function Contacts() {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [isSend, setIsSend] = useState(false)
+  const { sqCalculate } = useContext(Context)
 
   const handlerSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSend(true)
-    const res = await axios.post(`/api/sendmail`, { name, email, path })
+    const res = await axios.post(`/api/sendmail`, { name, email, path, sqCalculate })
   }
 
   return (<div className="mt-extra content">

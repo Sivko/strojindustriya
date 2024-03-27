@@ -18,7 +18,7 @@ export default function About() {
   }, [])
 
   const items = [
-    { title: "Проектов в протфеле компании", metric: "> 15", image: "" },
+    { title: "Проектов в портфеле компании", metric: "> 15", image: "" },
     { title: "Коммерческой и жилой недвидимости", metric: "60 000 м²", image: "" },
     { title: "", metric: "", image: "" },
     { title: "", metric: "", image: "/images/building.png" },

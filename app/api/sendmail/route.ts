@@ -1,6 +1,6 @@
 export async function POST(request: Request) {
 
-  const {name, email, path} = await request.json()
+  const {name, email, path, sqCalculate} = await request.json()
   console.log(name, email, path)
 
   try {
@@ -26,7 +26,8 @@ export async function POST(request: Request) {
       html:
         `Имя:  ${name}<br/>
          Email: ${email}<br/>
-         Path: ${path}
+         Path: ${path}<br />
+         Calculate: ${sqCalculate}м²
          `,
     });
 

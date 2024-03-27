@@ -6,6 +6,7 @@ import Responseble from "@/components/Responseble";
 import About from "@/components/About";
 import Partners from "@/components/Partners";
 import Contacts from "@/components/Contacts";
+import Calculate from "@/components/Calculate";
 
 export default function Home() {
 
@@ -18,6 +19,7 @@ export default function Home() {
       <Responseble />
       <About />
       <Partners />
+      <Calculate />
       <Contacts />
     </main>
   );

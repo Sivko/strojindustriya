@@ -12,6 +12,8 @@ interface User {
 interface Theme {
   modals: JSX.Element[]
   setModals: React.Dispatch<React.SetStateAction<any>>
+  sqCalculate: number[],
+  setSqCalculate: React.Dispatch<React.SetStateAction<number[]>>
   global: Root,
   isAdmin: boolean,
   setIsAdmin: React.Dispatch<React.SetStateAction<boolean>>
@@ -26,16 +28,19 @@ export const Context = createContext<Theme>({
   setUser: () => { },
   setIsAdmin: () => { },
   setModals: () => { },
+  sqCalculate: [100],
+  setSqCalculate: ()=>{},
   global: {} as Root
 })
 
 function PageProvider({ children, global={results: []} }: Readonly<{ children: React.ReactNode; global?: Root }>) {
 
   const [modals, setModals] = useState([]);
+  const [sqCalculate, setSqCalculate] = useState([100]);
   const [isAdmin, setIsAdmin] = useState(false);
   const [user, setUser] = useState({ email: "", phone: "" });
 
-  return <Context.Provider value={{ modals, setModals, global, isAdmin, setIsAdmin, user, setUser }}>{children}</Context.Provider>
+  return <Context.Provider value={{ modals, setModals, global, isAdmin, setIsAdmin, user, setUser, sqCalculate, setSqCalculate }}>{children}</Context.Provider>
 }
 
 export default PageProvider;
