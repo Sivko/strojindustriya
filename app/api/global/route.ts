@@ -8,7 +8,7 @@ export async function GET(request: Request) {
       },
       body: null,
     }
-    const _data = await fetch(`${process.env.NOTE_DB_CONTENT}`, { cache: "no-cache", method: "POST", headers: config.headers })
+    const _data = await fetch(`${process.env.NOTE_DB_CONTENT}`, { next: {revalidate: 3600}, method: "POST", headers: config.headers })
     const data = await _data.json();
     return Response.json(data)
   } catch (err) {
