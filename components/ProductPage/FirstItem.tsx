@@ -23,7 +23,7 @@ export default function FirstItem({ data }: { data: Result }) {
           </div>
         </div>
       </div>
-      <Image className="mt-14 w-full" src={data.properties.media.files[0].file.url} height={852} width={1600} alt="" />
+      <Image className="mt-14 w-full" src={data.properties.media.files[0].file.url} height={852} width={1600} alt="" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mPc8R8AAnUBuTe7lTwAAAAASUVORK5CYII=" />
     </>
   )
 }
