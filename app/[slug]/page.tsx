@@ -13,7 +13,7 @@ type Params = {
 
 export async function generateMetadata(request: Params): Promise<Metadata> {
 
-  const res = await fetch(`${process.env.URL}/api/global`, { next: { revalidate: 3600 } })
+  const res = await fetch(`${process.env.URL}/api/global`, { cache: "no-cache" })
   const global = await res.json() as Root;
   const page = global.results?.filter(item => (item.properties?.slug?.rich_text[0] ? item.properties.slug.rich_text[0].text.content : "") == `/${request.params?.slug}`)
   if (!page?.length) return notFound()
@@ -26,7 +26,7 @@ export async function generateMetadata(request: Params): Promise<Metadata> {
 
 export default async function Page(request: Params) {
 
-  const res = await fetch(`${process.env.URL}/api/global`)
+  const res = await fetch(`${process.env.URL}/api/global`, {cache: "no-cache"})
   const global = await res.json() as Root;
   const page = global.results?.filter(item => (item.properties?.slug?.rich_text[0] ? item.properties.slug.rich_text[0].text.content : "") == `/${request.params?.slug}`)
 

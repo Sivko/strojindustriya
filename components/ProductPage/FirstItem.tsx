@@ -19,7 +19,7 @@ export default function FirstItem({ data }: { data: Result }) {
             {data.properties.description.rich_text[0].text.content}
           </p>
           <div className=" mt-6">
-            <Button />
+            <Button href="#contacts" />
           </div>
         </div>
       </div>

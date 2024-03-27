@@ -9,15 +9,18 @@ export default function RealizationItem({ item }: { item: Result }) {
   const { properties } = item
 
   const images = properties.media.files.map((item) => item.file.url);
-
-  const rangeYear = properties.date.date.end ? `${new Date(properties.date.date.start).getFullYear()}-${new Date(properties.date.date.end).getFullYear()}` : new Date(properties.date.date.start).getFullYear();
+  
+  let rangeYear
+  if (properties.date?.date?.end) {
+    rangeYear = properties.date.date.end ? `${new Date(properties.date.date.start).getFullYear()}-${new Date(properties.date.date.end).getFullYear()}` : new Date(properties.date.date.start).getFullYear();
+  }
   const swiperRef = useRef<SwiperRef>(null)
 
   return (<>
     <div className="content ">
       <div className="md:grid grid-cols-4 gap-4 mt-12 pb-6 md:border-b md:border-outline">
         <div className="font-semibold text-small md:mb-0 mb-6">{rangeYear}</div>
-        <div className="col-span-3 font-semibold">{properties.title.title[0].text.content}</div>
+        <div className="col-span-3 font-semibold">{properties.title.title[0]?.text?.content}</div>
       </div>
     </div>
     <div className="md:grid grid-cols-4 gap-4 content mt-2 md:mt-12">

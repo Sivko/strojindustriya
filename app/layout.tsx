@@ -16,9 +16,9 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  const res = await fetch(`${process.env.URL}/api/global`, { next: { revalidate: 3600 } })
-  const global = await res.json() as Root;
-
+  const res = await fetch(`${process.env.URL}/api/global`, { cache: "no-cache" })
+  const _global = await res.json() as Root;
+  const global = {..._global, results: _global.results.filter(e=>e.properties.Status.status.name == "publish")}
   return (
     <html lang="ru">
       <body className="text-text">

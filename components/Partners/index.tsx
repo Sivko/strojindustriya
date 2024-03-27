@@ -10,9 +10,9 @@ export default function Partners() {
 
   const list = [
     {image: "/images/partners/partner1.png"},
+    {image: "/images/partners/partner5.png"},
     {image: "/images/partners/partner2.png"},
     {image: "/images/partners/partner3.png"},
-    {image: "/images/partners/partner4.png"},
 ]
   const swiperRef = useRef<SwiperRef>(null)
 

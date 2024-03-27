@@ -12,7 +12,7 @@ export default function StepWorks() {
       </div>
 
       <div className="md:grid grid-cols-4 gap-4 pb-6  content mt-12 md:mt-24 items-center">
-        <div><Link className="font-semibold text-base pb-[7px] border-b border-text" href={`tel:+79787969632`}>+7 (978) 796 - 96 -32</Link></div>
+        <div><Link className="font-semibold text-base pb-[7px] border-b border-text" href={`tel:+79787428330`}>+7 (978) 742-83-30</Link></div>
         <div className="col-span-3 border-b border-outline pb-6">
           <div className="md:grid gap-4 grid-cols-3 items-center">
             <div className="text-[clamp(44px,8vw,96px)] col-span-2 font-light">Брифинг</div>
@@ -25,7 +25,9 @@ export default function StepWorks() {
           </div>
         </div>
 
-        <div><Link className="font-semibold text-base pb-[7px] border-b border-text" href={`#`}>Скачать документ</Link></div>
+        <div>
+          {/* <Link className="font-semibold text-base pb-[7px] border-b border-text" href={`#`}>Скачать документ</Link> */}
+        </div>
         <div className="col-span-3 border-b border-outline pb-6">
           <div className="md:grid gap-4 grid-cols-3 items-center">
             <div className="text-[clamp(44px,8vw,96px)] col-span-2 font-light">Договор</div>

@@ -11,7 +11,7 @@ export default function FirstItem() {
           Мы амбициозная проектно-строительная организация, имеющая значительный опыт в проектировании и реализации гражданских и промышленных сооружений
         </p>
         <div className=" mt-6">
-          <Button />
+          <Button href="/#contacts" />
         </div>
       </div>
     </div>
