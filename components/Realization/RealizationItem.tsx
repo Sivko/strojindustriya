@@ -39,7 +39,7 @@ export default function RealizationItem({ item }: { item: Result }) {
           {images.map((image, index) => {
             return (<SwiperSlide key={index}>
               <div>
-                <Image className="w-full" src={image} height={358} width={240} alt="" />
+                <Image className="w-full" src={image} height={240} width={240} alt="" placeholder="blur" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mPc8R8AAnUBuTe7lTwAAAAASUVORK5CYII=" />
               </div>
             </SwiperSlide>)
           })}

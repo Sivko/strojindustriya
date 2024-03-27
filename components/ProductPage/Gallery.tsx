@@ -14,7 +14,7 @@ export default function Gallery({ data }: { data: Result }) {
           if (index == 0) return;
           const rules = ["", "col-span-2", "col-span-2", "col-span-2", "col-span-1", "col-span-4", "col-span-2", "col-span-2", "col-span-2", "col-span-1", "col-span-4"]
           return (<div className={`${rules[index]}`} key={index}>
-            <Image className="w-full" alt="" src={item.file.url} width={600} height={500} />
+            <Image className="w-full" alt="" src={item.file.url} width={600} height={500} placeholder="blur" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mPc8R8AAnUBuTe7lTwAAAAASUVORK5CYII=" />
           </div>)
         })}
       </div>
