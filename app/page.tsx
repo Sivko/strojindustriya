@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main>
       <FirstItem />
-      <OfferList />
+      {/* <OfferList /> */}
       <Realization />
       <StepWorks />
       <Responseble />

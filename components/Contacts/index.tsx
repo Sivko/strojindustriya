@@ -40,7 +40,7 @@ export default function Contacts() {
           <p className="text-base text-addText mb-3">Ул. Бульвар Старшинова 12. 1-й этаж офис 7</p>
           {/* <div className="w-full h-[150px] bg-addText mt-3 mb-6"></div> */}
           <YMaps>
-            <div className="grayscale mb-3">
+            <div className="mb-3">
               <Map defaultState={{ center: [45.049240, 35.375063], zoom: 14 }}>
                 <Placemark geometry={[45.049240, 35.375063]} />
               </Map>
