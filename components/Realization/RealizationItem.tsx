@@ -34,12 +34,12 @@ export default function RealizationItem({ item }: { item: Result }) {
           <Button href={properties.slug.rich_text[0]?.text?.content} text="Подробнее" icons={false} />
         </div>}
       </div>
-      <div className="col-span-2">
+      <div className="col-span-2 overflow-hidden h-[256px]">
         <Slider slidesPerView={2} swiperRef={swiperRef}>
           {images.map((image, index) => {
             return (<SwiperSlide key={index}>
               <div>
-                <Image className="w-full" src={image} height={240} width={240} alt="" placeholder="blur" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mPc8R8AAnUBuTe7lTwAAAAASUVORK5CYII=" />
+                <Image className="w-full" src={image} height={384} width={256} alt="" placeholder="blur" blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mPc8R8AAnUBuTe7lTwAAAAASUVORK5CYII=" />
               </div>
             </SwiperSlide>)
           })}

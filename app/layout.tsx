@@ -17,7 +17,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  const res = await fetch(`${process.env.NOTE_DB_CONTENT}`, configNotion)
+  const res = await fetch(`${process.env.NOTE_DB_CONTENT}`, {...configNotion, cache: "no-cache"})
   const _global = await res.json() as Root;
   const global = {..._global, results: _global.results.filter(e=>e.properties.Status.status.name == "publish")}
   return (

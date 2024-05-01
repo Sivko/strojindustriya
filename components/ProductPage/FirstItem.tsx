@@ -6,7 +6,6 @@ import Button from "@/components/Button";
 export default function FirstItem({ data }: { data: Result }) {
   return (
     <>
-
       <h1 className="mt-12 whitespace-nowrap">
         <Marquee className="overflow-hidden">
           {data.properties.title.title[0].text.content}

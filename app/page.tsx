@@ -8,6 +8,8 @@ import Partners from "@/components/Partners";
 import Contacts from "@/components/Contacts";
 import Calculate from "@/components/Calculate";
 
+
+
 export default function Home() {
 
   return (
