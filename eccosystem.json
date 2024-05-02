@@ -1,0 +1,16 @@
+{
+  "apps" : [
+     {
+        "name"          : "App",
+        "script"        : "npm",
+        "args"          : "run start",
+        "watch"         : false,
+        "cwd"           : "/var/www/html/strojindustriya",
+        "out_file"      : "/var/www/html/hooker.out.log",
+        "err_file"      : "/var/www/html/hooker.err.log",
+        "merge_logs"    : true,
+        "instances"     : 1,
+        "exec_mode"     : "cluster"
+     }
+  ]
+}
