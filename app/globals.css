@@ -120,7 +120,7 @@
   font-display: swap;
 }
 
-@font-face {
+@font-face { 
   font-family: 'Hauora';
   src: url('./fonts/Hauora-Regular.woff2') format('woff2'),
     url('./fonts/Hauora-Regular.woff') format('woff');
